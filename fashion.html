@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fashion - Shopistoo</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f6fb;
+            color: #111827;
+        }
+
+        header {
+            background: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #5b21e6;
+        }
+
+        nav a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #111827;
+            font-weight: 600;
+        }
+
+        .page-title {
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
+
+        .page-title h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            color: #6b7280;
+            font-size: 18px;
+        }
+
+        .categories {
+            max-width: 1100px;
+            margin: 20px auto 60px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .category {
+            background: white;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .category-icon {
+            font-size: 70px;
+            margin-bottom: 20px;
+        }
+
+        .category h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .category p {
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .category a {
+            display: block;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .back a {
+            color: #5b21e6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 800px) {
+            .categories {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">SHOPISTOO</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html#products">Products</a>
+        <a href="index.html#categories">Categories</a>
+        <a href="index.html#about">About</a>
+    </nav>
+
+</header>
+
+<section class="page-title">
+
+    <h1>Fashion</h1>
+
+    <p>
+        Discover fashion products from different styles, brands, and price ranges.
+    </p>
+
+</section>
+
+<section class="categories">
+
+    <div class="category">
+
+        <div class="category-icon">👕</div>
+
+        <h3>Men's Clothing</h3>
+
+        <p>
+            Explore shirts, t-shirts, jackets, jeans and more.
+        </p>
+
+        <a href="#">
+            Explore Men's Clothing →
+        </a>
+
+    </div>
+
+
+    <div class="category">
+
+        <div class="category-icon">👗</div>
+
+        <h3>Women's Clothing</h3>
+
+        <p>
+            Discover dresses, tops, clothing and stylish outfits.
+        </p>
+
+        <a href="#">
+            Explore Women's Clothing →
+        </a>
+
+    </div>
+
+
+    <div class="category">
+
+        <div class="category-icon">👟</div>
+
+        <h3>Shoes</h3>
+
+        <p>
+            Find sneakers, casual shoes, sports shoes and more.
+        </p>
+
+        <a href="#">
+            Explore Shoes →
+        </a>
+
+    </div>
+
+
+    <div class="category">
+
+        <div class="category-icon">⌚</div>
+
+        <h3>Watches</h3>
+
+        <p>
+            Compare stylish watches from different brands and prices.
+        </p>
+
+        <a href="#">
+            Explore Watches →
+        </a>
+
+    </div>
+
+
+    <div class="category">
+
+        <div class="category-icon">👜</div>
+
+        <h3>Bags</h3>
+
+        <p>
+            Discover backpacks, handbags, travel bags and more.
+        </p>
+
+        <a href="#">
+            Explore Bags →
+        </a>
+
+    </div>
+
+
+    <div class="category">
+
+        <div class="category-icon">🕶️</div>
+
+        <h3>Accessories</h3>
+
+        <p>
+            Explore sunglasses, belts, wallets and other accessories.
+        </p>
+
+        <a href="#">
+            Explore Accessories →
+        </a>
+
+    </div>
+
+</section>
+
+<div class="back">
+
+    <a href="index.html">
+        ← Back to Shopistoo
+    </a>
+
+</div>
+
+</body>
+</html>

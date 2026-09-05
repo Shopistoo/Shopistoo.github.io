@@ -411,14 +411,14 @@
 <body>
 
 <header>
-    <div class="logo">SHOPISTOO</div>
 
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search products...">
-        <button onclick="searchProducts()">🔍 Search</button>
-        <button onclick="clearSearch()" class="clear-btn">Clear</button>
+    <!-- TOP -->
+    <div class="top-row">
+        <div class="logo">SHOPISTOO</div>
+        <a href="#products" class="shop-btn">Shop Now</a>
     </div>
 
+    <!-- MIDDLE -->
     <nav>
         <a href="#">Home</a>
         <a href="#products">Products</a>
@@ -426,7 +426,13 @@
         <a href="#about">About</a>
     </nav>
 
-    <a href="#products" class="shop-btn">Shop Now</a>
+    <!-- LOW -->
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search products...">
+        <button onclick="searchProducts()">🔍 Search</button>
+        <button onclick="clearSearch()" class="clear-btn">Clear</button>
+    </div>
+
 </header>
 
 <section class="hero">

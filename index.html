@@ -617,6 +617,15 @@ function searchProducts() {
         }
     });
 }
+    function clearSearch() {
+    document.getElementById("searchInput").value = "";
+
+    const products = document.querySelectorAll(".product");
+
+    products.forEach(function(product) {
+        product.style.display = "";
+    });
+}
 </script>
 </body>
 </html>

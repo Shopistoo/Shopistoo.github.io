@@ -671,20 +671,38 @@
     </p>
 
 </footer>
-<script>
 function searchProducts() {
     const searchText = document.getElementById("searchInput").value.toLowerCase().trim();
-    const products = document.querySelectorAll(".product");
+    const searchResults = document.getElementById("searchResults");
 
-    products.forEach(function(product) {
-        const productName = product.innerText.toLowerCase();
+    if (searchText === "") {
+        searchResults.innerHTML = "";
+        return;
+    }
 
-        if (productName.includes(searchText)) {
-            product.style.display = "";
-        } else {
-            product.style.display = "none";
-        }
+    const matches = products.filter(function(product) {
+        return (
+            product.name.toLowerCase().includes(searchText) ||
+            product.category.toLowerCase().includes(searchText) ||
+            product.subcategory.toLowerCase().includes(searchText)
+        );
     });
+
+    if (matches.length === 0) {
+        searchResults.innerHTML = "<p>No products found.</p>";
+        return;
+    }
+
+    searchResults.innerHTML = matches.map(function(product) {
+        return `
+            <div class="search-result">
+                <h3>${product.name}</h3>
+                <p>${product.category} → ${product.subcategory}</p>
+                <p>${product.price}</p>
+                <a href="${product.page}">View Product →</a>
+            </div>
+        `;
+    }).join("");
 }
     function clearSearch() {
     document.getElementById("searchInput").value = "";

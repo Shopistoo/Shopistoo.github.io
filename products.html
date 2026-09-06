@@ -630,6 +630,13 @@ function filterProducts() {
             }
         });
 }
+    const urlParams = new URLSearchParams(window.location.search);
+const searchQuery = urlParams.get("search");
+
+if (searchQuery) {
+    document.getElementById("searchInput").value = searchQuery;
+    filterProducts();
+}
 </script>
 
 </body>

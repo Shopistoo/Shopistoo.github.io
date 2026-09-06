@@ -611,35 +611,25 @@ function toggleMenu() {
 
 
 function filterProducts() {
-
-    const query =
-        document
+    const query = document
         .getElementById("searchInput")
         .value
         .toLowerCase()
         .trim();
 
-
     document
         .querySelectorAll(".product")
         .forEach(function(product) {
 
-            if (
-                product.dataset.search.includes(query)
-            ) {
+            const text = product.innerText.toLowerCase();
 
+            if (text.includes(query)) {
                 product.style.display = "";
-
             } else {
-
                 product.style.display = "none";
-
             }
-
         });
-
 }
-
 </script>
 
 </body>

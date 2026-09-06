@@ -863,14 +863,14 @@ header .search-container {
 </footer> 
 <script>
 function searchProducts() {
-    const searchText = document.getElementById("searchInput").value.toLowerCase().trim();
-    const searchResults = document.getElementById("searchResults");
+    const searchText = document.getElementById("searchInput").value.trim();
 
     if (searchText === "") {
-        searchResults.innerHTML = "";
         return;
     }
 
+    window.location.href = "products.html?search=" + encodeURIComponent(searchText);
+}
     const matches = products.filter(function(product) {
         return (
             product.name.toLowerCase().includes(searchText) ||

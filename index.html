@@ -862,6 +862,7 @@ header .search-container {
 
 </footer> 
 <script>
+
 function searchProducts() {
     const searchText = document.getElementById("searchInput").value.trim();
 
@@ -871,44 +872,19 @@ function searchProducts() {
 
     window.location.href = "products.html?search=" + encodeURIComponent(searchText);
 }
-    const matches = products.filter(function(product) {
-        return (
-            product.name.toLowerCase().includes(searchText) ||
-            product.category.toLowerCase().includes(searchText) ||
-            product.subcategory.toLowerCase().includes(searchText)
-        );
-    });
 
-    if (matches.length === 0) {
-        searchResults.innerHTML = "<p>No products found.</p>";
-        return;
-    }
-
-    searchResults.innerHTML = matches.map(function(product) {
-        return `
-            <div class="search-result">
-                <h3>${product.name}</h3>
-                <p>${product.category} → ${product.subcategory}</p>
-                <p>${product.price}</p>
-                <a href="${product.page}">View Product →</a>
-            </div>
-        `;
-    }).join("");
-}
-    function clearSearch() {
+function clearSearch() {
     document.getElementById("searchInput").value = "";
-
-    const products = document.querySelectorAll(".product");
-
-    products.forEach(function(product) {
-        product.style.display = "";
-    });
+    window.location.href = "products.html";
 }
+
 function toggleMenu() {
     const menu = document.getElementById("mobileMenu");
     menu.classList.toggle("show");
 }
+
 </script>
-    <script src="products.js"></script>
+
+<script src="products.js"></script>
 </body>
 </html>
